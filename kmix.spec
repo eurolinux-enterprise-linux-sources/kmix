@@ -1,7 +1,7 @@
 Name:    kmix 
 Summary: KDE volume control 
 Version: 4.10.5
-Release: 2%{?dist}
+Release: 4%{?dist}
 
 # code is LGPLv2+ except for gui/osdwidget.* which is GPLv2+
 # docs GFDL
@@ -112,6 +112,12 @@ fi
 
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 4.10.5-4
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 4.10.5-3
+- Mass rebuild 2013-12-27
+
 * Thu Jul 11 2013 Rex Dieter <rdieter@fedoraproject.org> 4.10.5-2
 - backport memleak-on-track-change fix (kde#309464, #912457)
 
