@@ -1,0 +1,26 @@
+From 71698628d49d235b0bca5935ef37230e9b550e53 Mon Sep 17 00:00:00 2001
+From: Christian Esken <esken@kde.org>
+Date: Tue, 2 Jul 2013 00:33:06 +0200
+Subject: [PATCH 1/4] Less debugging output
+
+---
+ backends/mixer_backend.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/backends/mixer_backend.cpp b/backends/mixer_backend.cpp
+index 46047ca..f4758d6 100644
+--- a/backends/mixer_backend.cpp
++++ b/backends/mixer_backend.cpp
+@@ -170,7 +170,8 @@ void Mixer_Backend::readSetFromHW()
+ 
+ 	foreach (shared_ptr<MixDevice> md, m_mixDevices )
+ 	{
+-	  bool debugMe = (md->id() == "PCM:0" );
++	  //bool debugMe = (md->id() == "PCM:0" );
++	  bool debugMe = false;
+ 	  if (debugMe) kDebug() << "Old PCM:0 playback state" << md->isMuted()
+ 	    << ", vol=" << md->playbackVolume().getAvgVolumePercent(Volume::MALL);
+ 	    
+-- 
+1.8.3.1
+
